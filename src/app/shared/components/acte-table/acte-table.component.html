@@ -1,0 +1,30 @@
+<div class="card">
+    <p-table class="p-datatable-custom" [value]="data" selectionMode="single" [(selection)]="selected" dataKey="code" styleClass="p-datatable-sm"
+             (onRowSelect)="onRowSelect($event)" (onRowUnselect)="onRowUnselect($event)" [tableStyle]="{'min-width': '50rem'}">
+
+        <ng-template pTemplate="header" >
+            <tr>
+                <th style="color: #FFF; background-color: #638d75; border-color:#638d75">#</th>
+                <th *ngFor="let column in columns" style="color: #FFF; background-color: #638d75; border-color:#638d75">{{column}}</th>
+                <th style="color: #FFF; background-color: #638d75; border-color:#638d75">Action</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-village let-rowIndex="rowIndex">
+            <tr [pSelectableRow]="selectedItem">
+                <td>{{rowIndex +1}}</td>
+                <td *ngFor="let column in columns">{{selectedItem[column]}}</td>
+                <td class="actionsStyle">
+                    <div>
+                        <button pButton pRipple type="button" icon="pi pi-eye" label="" pTooltip="Visualiser" class="p-button-info mr-2" ></button>
+                        <button pButton pRipple type="button" icon="pi pi-pencil" label="" (click)="edit()" pTooltip="Modifier" class="p-button-warning mr-2"></button>
+                        <button pButton pRipple type="button" icon="pi pi-trash" label="" (click)="_delete()" class="p-button-danger mr-2" pTooltip="Supprimer"></button>
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+
+    </p-table>
+</div>
+<div class=" flex justify-content-center">
+    <p-paginator (onPageChange)="loadPage()" [first]="first" [rows]="rows" [totalRecords]="totalRecord" [rowsPerPageOptions]="[10, 20, 30]"></p-paginator>
+</div>

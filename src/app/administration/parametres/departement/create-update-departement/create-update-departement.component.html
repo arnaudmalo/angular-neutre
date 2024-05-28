@@ -1,0 +1,34 @@
+<p-divider></p-divider>
+<ng-template pTemplate="header">
+
+</ng-template>
+<form (ngSubmit)="editing === true? editEntity():saveEntity()" #departementForm="ngForm" style="margin-top:20px;">
+
+
+    <div class="formgrid grid">
+
+        <div class="field col-6 md:col-6">
+            <label for="sigle">Sigle <span class="text-danger">*</span></label>
+            <input id="sigle" type="text" [(ngModel)]="departement.sigle" name="sigle"  pInputText required class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+
+        <div class="field col-6 md:col-6">
+            <label for="libelle">Libéllé <span class="text-danger">*</span></label>
+            <input id="libelle" type="text" [(ngModel)]="departement.libelle" name="libelle"  pInputText required class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+
+    </div>
+
+    <p-divider class="mt-10"></p-divider>
+
+    <!--div class="p-ml-auto text-right">
+        <button label="Annuler" (click)="clear()" class="p-button-filter mr-3 p-button-danger" pButton icon="pi pi-times"></button>
+        <button type="submit" [disabled]="!departementForm.form.valid" label="{{isEditing() ? 'Enregistrer' : 'Ajouter'}}" icon="pi {{isEditing() ? 'pi-save' : 'pi-plus'}}" class="p-button-raised  {{isEditing() ? 'p-button-primary' : 'p-button-success'}}" pButton>
+        </button>
+    </div-->
+    <div class="p-ml-auto text-right">
+        <button label="Annuler" (click)="clear()" class="p-button-filter mr-3 p-button-danger" pButton icon="pi pi-times"></button>
+        <button type="submit" [disabled]="!departementForm.valid" label="Enregistrer" icon="pi pi-save" class="p-button-raised  p-button-success" pButton>
+        </button>
+    </div>
+</form>

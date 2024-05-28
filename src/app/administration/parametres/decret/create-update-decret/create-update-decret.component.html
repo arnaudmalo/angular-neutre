@@ -1,0 +1,24 @@
+<p-divider></p-divider>
+<ng-template pTemplate="header">
+
+</ng-template>
+<form (ngSubmit)="editing === true? editEntity():saveEntity()" #decretForm="ngForm" style="margin-top:20px;">
+
+
+    <div class="formgrid grid">
+
+        <div class="field col-12 md:col-12">
+            <label for="libelle">Libéllé <span class="text-danger">*</span></label>
+            <textarea id="libelle" type="text" [(ngModel)]="decret.libelle" name="libelle"  pInputText required class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
+        </div>
+
+    </div>
+
+    <p-divider class="mt-10"></p-divider>
+
+    <div class="p-ml-auto text-right">
+        <button label="Annuler" (click)="clear()" class="p-button-filter mr-3 p-button-danger" pButton icon="pi pi-times"></button>
+        <button type="submit" [disabled]="!decretForm.valid" label="Enregistrer" icon="pi pi-save" class="p-button-raised  p-button-success" pButton>
+        </button>
+    </div>
+</form>
