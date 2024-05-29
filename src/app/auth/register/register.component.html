@@ -8,7 +8,7 @@
 <div class="px-5 min-h-screen flex justify-content-center align-items-center">
     <div class="border-1 surface-border surface-card border-round py-7 px-4 md:px-7 z-1">
         <div class="mb-4">
-            <div class="text-900 text-xl font-bold mb-2">Register</div>
+            <div class="text-900 text-xl font-bold mb-2">Enregistrement</div>
         </div>
         <div class="flex flex-column">
             <span class="p-input-icon-left w-full mb-4">
@@ -17,19 +17,66 @@
             </span>
             <span class="p-input-icon-left w-full mb-4">
                 <i class="pi pi-envelope"></i>
+                <input id="nom" type="text" pInputText class="w-full md:w-25rem" placeholder="Nom">
+            </span>
+            <span class="p-input-icon-left w-full mb-4">
+                <i class="pi pi-envelope"></i>
+                <input id="prenom" type="text" pInputText class="w-full md:w-25rem" placeholder="Prénom(s)">
+            </span>
+            <span class="p-input-icon-left w-full mb-4">
+                <i class="pi pi-envelope"></i>
+                <input id="matricule" type="text" pInputText class="w-full md:w-25rem" placeholder="<matricule>">
+            </span>
+            <span class="p-input-icon-left w-full mb-4">
+                <i class="pi pi-envelope"></i>
+                <input id="telephone" type="date" pInputText class="w-full md:w-25rem" placeholder="Téléphone">
+            </span>
+            <span class="p-input-icon-left w-full mb-4">
+                <i class="pi pi-envelope"></i>
                 <input id="email" type="text" pInputText class="w-full md:w-25rem" placeholder="Email">
             </span>
             <span class="p-input-icon-left w-full mb-4">
+                <i class="pi pi-envelope"></i>
+                <input id="fonction" type="text" pInputText class="w-full md:w-25rem" placeholder="Fonction">
+            </span>
+            <span class="p-input-icon-left w-full mb-4">
+                <i class="pi pi-envelope"></i>
+                <input id="dateAffectation" type="text" pInputText class="w-full md:w-25rem" placeholder="Date d'Affectation">
+            </span>
+            <span class="p-input-icon-left w-full mb-4">
+                <i class="pi pi-envelope"></i>
+                <input id="echelle" type="text" pInputText class="w-full md:w-25rem" placeholder="Echelle">
+            </span>
+            <span class="p-input-icon-left w-full mb-4">
+                <i class="pi pi-envelope"></i>
+                <input id="dateEchelle" type="date" pInputText class="w-full md:w-25rem" placeholder="Date d'Echelle">
+            </span>
+            <span class="p-input-icon-left w-full mb-4">
+                <i class="pi pi-envelope"></i>
+                <input id="echellon" type="text" pInputText class="w-full md:w-25rem" placeholder="Echellon">
+            </span>
+            <span class="p-input-icon-left w-full mb-4">
+                <i class="pi pi-envelope"></i>
+                <input id="dateEchellon" type="date" pInputText class="w-full md:w-25rem" placeholder="Date d'Echellon">
+            </span>
+            <span class="p-input-icon-left w-full mb-4">
+                <i class="pi pi-envelope"></i>
+                <input id="categorie" type="number" pInputText class="w-full md:w-25rem" placeholder="Categorie">
+            </span>
+            <span class="p-input-icon-left w-full mb-4">
+                <i class="pi pi-envelope"></i>
+                <input id="posteResponsabilite" type="checkbox" pInputText class="w-full md:w-25rem" placeholder="Poste de Responsabilite">
+            </span>
+            <span class="p-input-icon-left w-full mb-4">
                 <i class="pi pi-lock"></i>
-                <input id="password" type="password" pInputText class="w-full md:w-25rem" placeholder="Password">
+                <input id="password" type="password" pInputText class="w-full md:w-25rem" placeholder="Mot de passe">
             </span>
             <div class="mb-4 flex flex-wrap">
                 <p-checkbox name="checkbox" value="val" [(ngModel)]="confirmed" styleClass="mr-2" [binary]="true"></p-checkbox>
-                <label for="checkbox" class="text-900 font-medium mr-2">I have read the</label>
-                <a class="text-600 cursor-pointer hover:text-primary cursor-pointer">Terms and Conditions</a>
+                <a class="text-600 cursor-pointer hover:text-primary cursor-pointer">Termes et Conditions</a>
             </div>
             <button pButton pRipple label="Sign Up" class="w-full mb-4" [routerLink]="['/auth']"></button>
-            <span class="font-medium text-600" [routerLink]="['/auth']">Already have an account? <a class="font-semibold cursor-pointer text-900 hover:text-primary transition-colors transition-duration-300">Login</a></span>
+            <span class="font-medium text-600" [routerLink]="['/auth']">Avez vous déjà un compte ? <a class="font-semibold cursor-pointer text-900 hover:text-primary transition-colors transition-duration-300">Se connecter</a></span>
         </div>
     </div>
 </div>

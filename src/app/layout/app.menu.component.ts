@@ -69,7 +69,7 @@ export class AppMenuComponent implements OnInit {
                         routerLink: ['/dashboard-banking'],
 
                         items: [
-                            
+
                             {
                                 label: 'Roles',
                                 icon: 'pi pi-fw pi-user-minus',
@@ -85,7 +85,7 @@ export class AppMenuComponent implements OnInit {
                                 icon: 'pi pi-fw pi-user-minus',
                                 routerLink: ['/administration/parametres/decrets'],
 
-                            },   
+                            },
                         ],
                     },
 
@@ -96,6 +96,7 @@ export class AppMenuComponent implements OnInit {
                                     {
                                         label: 'Utilisateurs',
                                         icon: 'pi pi-fw pi-users',
+                                        routerLink: ['/agent'],
 
                                     },
                                     {

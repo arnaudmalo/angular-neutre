@@ -9,6 +9,7 @@ import {DetailDepartementComponent} from "./detail-departement/detail-departemen
 import {Table} from "primeng/table";
 import {FilterCriteria} from "../../../shared/models/filterCriteria";
 import { Departement, DepartementModel, IDepartementResponse } from '../../../shared/models/departement.model';
+import {PaginatorState} from "primeng/paginator";
 
 
 interface PageEvent {
@@ -78,7 +79,7 @@ export class DepartementComponent implements OnInit{
         });
 
     }
-    
+
 
     /* Permet d'afficher un modal pour la modification */
     openModalDepartementEdit(departement: IDepartementResponse): void {
@@ -150,7 +151,7 @@ export class DepartementComponent implements OnInit{
     }
 
 
-    loadPage(event: PageEvent) {
+    loadPage(event: PaginatorState) {
         this.page = event.page;
         this.rows = event.rows;
         this.getAllDepartements();

@@ -12,6 +12,7 @@ const routes: Routes = [
         children: [
             { path: '', loadChildren: () => import('./demo/components/dashboards/dashboards.module').then(m => m.DashboardsModule) },
             { path: 'administration', loadChildren: () => import('./administration/administration.module').then(m => m.AdministrationModule) },
+            { path: 'agent', loadChildren:()=> import('./agent/agent.module').then(a=> a.AgentModule)},
             //{ path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
             // { path: 'uikit', data: { breadcrumb: 'UI Kit' }, loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UIkitModule) },
             // { path: 'utilities', data: { breadcrumb: 'Utilities' }, loadChildren: () => import('./demo/components/utilities/utilities.module').then(m => m.UtilitiesModule) },

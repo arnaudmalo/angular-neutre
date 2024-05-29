@@ -3,7 +3,7 @@
     <div class="border-1 surface-border surface-card border-round py-7 px-4 md:px-7 z-1">
         <div class="mb-4">
             <div class="text-900 text-xl font-bold mb-2 text-center">
-                <img src="assets/images/anptic.jpg" height="100px">
+                <img src="assets/images/anptic.jpg" height="100px" alt="ANPTIC">
             </div>
         </div>
         <div class="flex flex-column">
@@ -13,14 +13,14 @@
             </span>
             <span class="p-input-icon-left w-full mb-4">
                 <i class="pi pi-lock"></i>
-                <input id="password" type="password" pInputText class="w-full md:w-25rem" placeholder="Password">
+                <input id="password" type="password" pInputText class="w-full md:w-25rem" placeholder="mot de passe">
             </span>
             <div class="mb-4 flex flex-wrap gap-3">
                 <div>
                     <p-checkbox name="checkbox" value="val" [(ngModel)]="rememberMe" styleClass="mr-2" [binary]="true"></p-checkbox>
-                    <label for="checkbox" class="text-900 font-medium mr-8">Se souvenir de moi</label>
+                    <label class="text-900 font-medium mr-8" id="checkbox">Se souvenir de moi</label>
                 </div>
-                <a class="text-600 cursor-pointer hover:text-primary cursor-pointer ml-auto transition-colors transition-duration-300">Reinitialiser mot de passe</a>
+                <a class="text-600 cursor-pointer hover:text-primary cursor-pointer ml-auto transition-colors transition-duration-300">Reinitialiser le mot de passe</a>
             </div>
             <button  pButton style="background-color: #377b53"  label="Se connecter" class="p-button-rounded text-white" [routerLink]="['/']"></button>
         </div>

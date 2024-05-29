@@ -9,6 +9,7 @@ import {DetailDecretComponent} from "./detail-decret/detail-decret.component";
 import {Table} from "primeng/table";
 import {FilterCriteria} from "../../../shared/models/filterCriteria";
 import { Decret, DecretModel, IDecretResponse } from '../../../shared/models/decret.model';
+import {PaginatorState} from "primeng/paginator";
 
 
 interface PageEvent {
@@ -78,7 +79,7 @@ export class DecretComponent implements OnInit{
         });
 
     }
-    
+
 
     /* Permet d'afficher un modal pour la modification */
     openModalDecretEdit(decret: IDecretResponse): void {
@@ -135,7 +136,7 @@ export class DecretComponent implements OnInit{
     }
 
 
-    loadPage(event: PageEvent) {
+    loadPage(event: PaginatorState) {
         this.page = event.page;
         this.rows = event.rows;
         this.getAllDecrets();
