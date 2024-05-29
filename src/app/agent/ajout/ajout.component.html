@@ -1,0 +1,102 @@
+<p-divider></p-divider>
+<ng-template pTemplate="header">
+
+</ng-template>
+
+
+<div class="col-md-6 offset-md-3">
+    <h1> Enregistrer un nouvel Agent </h1>
+    <form (ngSubmit) = "onSubmit()" #agentForm="ngForm" style="margin-top:20px;">
+
+        <div  class="field col-12 md:col-12" >
+            <label for="username">  Nom Utilisateur: <span class="text-danger">*</span></label>
+            <input id="username" type="text" [(ngModel)]="agent.username" name="username" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" >
+        </div>
+
+        <div  class="field col-12 md:col-12" >
+            <label for="nom">  Nom : <span class="text-danger">*</span></label>
+            <input id="nom" type="text" [(ngModel)]="agent.nom" name="nom" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" >
+        </div>
+
+        <div class="field col-12 md:col-12">
+            <label for="prenom">  Prénoms : <span class="text-danger">*</span></label>
+            <input id="prenom" type="text" [(ngModel)]="agent.prenom" name="prenom" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" >
+        </div>
+        <div class="field col-12 md:col-12">
+            <label for="matricule">  Matricule : <span class="text-danger">*</span></label>
+            <input id="matricule" type="text" [(ngModel)]="agent.matricule" name="matricule" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-12">
+            <label for="dateNaissance">  Date Naissance : <span class="text-danger">*</span></label>
+            <input id="dateNaissance" type="datetime-local" [(ngModel)]="agent.dateNaissance" name="dateNaissance" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+
+        </div>
+        <div class="field col-12 md:col-12">
+            <label for="tel">  Téléphone : <span class="text-danger">*</span></label>
+            <input id="tel" type="number" [(ngModel)]="agent.tel" name="tel" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" >
+
+        </div>
+        <div class="field col-12 md:col-12">
+            <label for="email">  Email : <span class="text-danger">*</span></label>
+            <input id="email" type="email" [(ngModel)]="agent.email" name="email" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-12">
+            <label for="fonction">  Fonction : <span class="text-danger">*</span></label>
+            <input id="fonction" type="text" [(ngModel)]="agent.fonction" name="fonction" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"  >
+
+        </div>
+        <div class="field col-12 md:col-12">
+            <label for="dateAffectation">  Date Affectation : <span class="text-danger">*</span></label>
+            <input id="dateAffectation" type="text" [(ngModel)]="agent.dateAffectation" name="dateAffectation" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+
+        <div class="field col-12 md:col-12">
+            <label for="echelle"> Echelle : <span class="text-danger">*</span></label>
+            <input id="echelle" type="text" [(ngModel)]="agent.echelle" name="echelle" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+
+        </div>
+        <div class="field col-12 md:col-12">
+            <label for="dateEchelle"> Date Echelle : <span class="text-danger">*</span></label>
+            <input id="dateEchelle" type="datetime-local" [(ngModel)]="agent.dateEchelle" name="dateEchelle" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+
+        </div>
+        <div class="field col-12 md:col-12">
+            <label for="echellon">  Echellon : <span class="text-danger">*</span></label>
+            <input id="echellon" type="datetime-local" [(ngModel)]="agent.echellon" name="echellon" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" >
+        </div>
+        <div class="field col-12 md:col-12">
+              <label for="dateEchellon"> Date Echellon : <span class="text-danger">*</span></label>
+              <input id="dateEchellon" type="date" [(ngModel)]="agent.dateEchellon" name="dateEchelle" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+
+        </div>
+
+        <div class="field col-12 md:col-12 mt-3">
+            <label> Catégorie : <span class="text-danger">*</span></label>
+            <select aria-label="Default select example" id = "categorie"  [(ngModel)] = "agent.categorie" name="categorie" class="p-listbox">
+                <option [defaultSelected]="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+
+            </select>
+        </div>
+
+        <div class="p-checkbox-icon m-3">
+            <label> Poste de responsabilite : <span class="text-danger">*</span></label>
+            <input type="checkbox"  id = "postResponsabilite"
+                   [(ngModel)] = "agent.postResponsabilite" name = "postResponsabilite" class="surface-overlay p-2 border-1 border-solid surface-border border-round">
+        </div>
+        <div  class="field col-12 md:col-12" >
+            <label for="password">  Mot de passe : <span class="text-danger">*</span></label>
+            <input id="password" type="password" [(ngModel)]="agent.password" name="password" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" >
+        </div>
+        <div class="p-ml-auto text-right">
+            <button label="Effacer" (click)="clear()" class="p-button-filter mr-3 p-button-danger" pButton icon="pi pi-times"></button>
+            <button type="submit" (click)="saveAgent()" label="Enregistrer" icon="pi pi-save" class="p-button-raised  p-button-success" pButton>
+            </button>
+        </div>
+
+    </form>
+</div>
